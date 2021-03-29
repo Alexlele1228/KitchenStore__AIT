@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
                                 if(dataSnapshot.child("email").getValue().equals(current_email)){
                                     mRef.child("Users").child(dataSnapshot.getKey()).child("kitchen_id").setValue(kitchen_id);
                                     Users.current_user.setKitchen_id(kitchen_id);
-                                    Log.d("123", "ran");
-                                    Log.d("123", Users.current_user.getKitchen_id());
                                 }
                             }
                         }
