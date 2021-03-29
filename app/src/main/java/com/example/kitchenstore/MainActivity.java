@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                                     mRef.child("Users").child(dataSnapshot.getKey()).child("kitchen_id").setValue(kitchen_id);
                                     Users.current_user.setKitchen_id(kitchen_id);
                                 }
+                                //..
                             }
                         }
 
