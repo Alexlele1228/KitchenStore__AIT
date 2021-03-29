@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.kitchenstore.fragments.InviteUserFragment;
+import com.example.kitchenstore.services.NotificationService;
 
 
 /**
@@ -74,6 +75,11 @@ public class HomepageFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        //start listening for inventory changes
+        Intent intent=new Intent(getContext(), NotificationService.class);
+        getActivity().startService(intent);
+
+        //...
         Button inventoryBtn, prepareMealBtn, expiredBtn, binBtn, inviteBtn, onlineStoreBtn;
         inventoryBtn=view.findViewById(R.id.inventory_button);
         expiredBtn=view.findViewById(R.id.expired_items_button_menu);

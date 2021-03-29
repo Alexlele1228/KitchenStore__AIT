@@ -2,6 +2,7 @@ package com.example.kitchenstore;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -61,4 +62,6 @@ public class BinMonthlyFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.bin_monthly_items, container, false);
     }
+
+
 }

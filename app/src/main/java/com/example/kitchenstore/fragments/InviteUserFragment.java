@@ -86,8 +86,8 @@ public class InviteUserFragment extends Fragment {
                 if(et_email.getText().toString().trim().equals(""))
                     return;
                 String email_body="Dear "+et_email.getText().toString()+":\n"+"\nWe are very happy to tell you that you were invited By " + Users.current_user.getUser_name()+" to join his/her inventory.\n Simply clicking the link below you will confirm this invitation: \n"
-                        + "https://kitchenstore-1bd6a.web.app/invite.html?param=" +Users.current_user.getKitchen_id()+"\n\n\n Please ignore this email if you don't want to join.\n\nRegards\nKitchen Store";
-                SendMailUtil.send(et_email.getText().toString(),email_Title,email_body);
+                        + "https://kitchenstore-1bd6a.web.app/invite.html?param=" +Users.current_user.getKitchen_id()+"&email="+et_email.getText().toString().trim() +"\n\n\n Please ignore this email if you don't want to join.\n\nRegards\nKitchen Store";
+                SendMailUtil.send(et_email.getText().toString().trim(),email_Title,email_body);
                 et_email.setText("");
                 Toast.makeText(getContext(),"Invitation has been sent.",Toast.LENGTH_LONG).show();
             }

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kitchenstore">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,21 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service
+            android:name=".services.NotificationService"
+            android:enabled="true"
+            android:exported="true"></service>
 
+        <activity android:name=".InvitationCompleteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="my.com"
+                    android:scheme="m" />
+            </intent-filter>
+        </activity>
         <activity android:name=".QRCodeActivity">
             <intent-filter>
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".CartActivity">
             <intent-filter>
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity android:name=".StoreActivity">
             <intent-filter>
                 <action android:name=".store" />

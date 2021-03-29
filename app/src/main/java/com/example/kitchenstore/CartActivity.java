@@ -27,6 +27,7 @@ private Button btn_pay;
                 if(RvAdapter.cartList.size()>0) {
                     Intent intent = new Intent(CartActivity.this, QRCodeActivity.class);
                     startActivity(intent);
+                    finish();
                 }
 
 

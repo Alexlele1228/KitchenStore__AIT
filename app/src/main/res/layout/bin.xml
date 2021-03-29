@@ -14,6 +14,7 @@
         android:layout_marginBottom="306dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/place_holder"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -24,6 +25,7 @@
         android:layout_marginBottom="305dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/place_holder"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
@@ -32,6 +34,7 @@
         android:layout_height="61dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="245dp"
+        android:background="@drawable/app_btn"
         android:text="Items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -40,8 +43,9 @@
         android:id="@+id/monthly_wastage_button"
         android:layout_width="133dp"
         android:layout_height="61dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="245dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="244dp"
+        android:background="@drawable/app_btn"
         android:text="Monthly Wastage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
